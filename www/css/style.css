@@ -1,0 +1,59 @@
+form {
+	display:inline;
+}
+
+.fl-name,.fl-actions {
+	text-align:left;
+	white-space:nowrap;
+}
+
+.fl-grit,.fl-fv,.fl-sv,.fl-speed,.fl-inuse {
+	text-align:center;
+}
+
+.fl-notes {
+	text-align:left;
+}
+
+.fl-cost {
+	text-align:right;
+}
+
+.ret-notes {
+	padding:1em;
+	border: 1px solid #000;
+	min-height:20em;
+}
+
+#figure-list {
+	border: 1px solid #000;
+}
+
+#figure-list td,#figure-list th {
+	padding:1em;
+}
+
+label {
+	clear:both;
+	display:block;
+	float:left;
+	min-width:10em;
+}
+
+fieldset {
+	padding:1em;
+	border: 1px solid grey;
+}
+
+legend {
+	padding:0.5em;
+}
+
+th {
+	white-space:nowrap;
+}
+
+textarea {
+	width:20em;
+	height:5em;
+}
