@@ -50,6 +50,7 @@
 <li><a href="/login">log in</a></li>
 <li><a href="/signup">sign up</a></li>
 {/if}
+<li><a href="https://github.com/iten-game/" target="_new">source code</a></li>
 </ul></div>
 
 <div class="clear"></div>
