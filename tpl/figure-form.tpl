@@ -1,15 +1,16 @@
 <table>
 
 <tr>
-<td width="25%">Attributes</td>
-<td width="25%">Weapons</td>
-<td width="25%">Special Abilities</td>
-<td width="25%">Psyker Powers</td>
+<td width="20%">Attributes</td>
+<td width="20%">Weapons</td>
+<td width="20%">Equipment</td>
+<td width="20%">Special Abilities</td>
+<td width="20%">Psyker Powers</td>
 </tr>
 
 <tr>
 
-<td width="25%" valign="top">
+<td width="20%" valign="top">
 
 <p><label for="name">Name:</label> <input type="text" name="name" id="name" value="{$smarty.request.name|escape}" placeholder="eg Inquisitor Cryptmann" /></p>
 
@@ -38,7 +39,7 @@
 	{/foreach}
 </select></p>
 
-</td><td width="25%" valign="top">
+</td><td width="20%" valign="top">
 
 <select name="weapons[]" id="weapons" multiple="multiple" size="20">
 	{assign var=weapons value=$RB->getWeapons()}
@@ -51,7 +52,21 @@
 	{/foreach}
 </select>
 
-</td><td width="25%" valign="top">
+</td><td width="20%" valign="top">
+
+<select name="equipment[]" id="equipment" multiple="multiple" size="20">
+	{assign var=equipment value=$RB->getEquipment()}
+	{foreach from=$equipment item=item}
+		<option value="{$item->id|escape}"
+			{if isset($smarty.request.equipment) && in_array($item->id, $smarty.request.equipment)}selected="selected"{/if}
+		>
+		{$item->name|escape} ({$item->getCost()|escape}pts)
+		</option>
+	{/foreach}
+</select>
+
+
+</td><td width="20%" valign="top">
 
 <select name="abilities[]" id="abilities" multiple="multiple" size="20">
 	{assign var=abilities value=$RB->getSpecialAbilities()}
@@ -64,7 +79,7 @@
 	{/foreach}
 </select>
 
-</td><td width="25%" valign="top">
+</td><td width="20%" valign="top">
 
 <select name="powers[]" id="powers" multiple="multiple" size="20">
 	{assign var=powers value=$RB->getPsykerPowers()}

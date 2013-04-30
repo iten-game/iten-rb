@@ -39,13 +39,16 @@
 			{$armour->name|escape} ({$armour->to_hit}+ to hit).
 
 			{assign var=weapons value=$figure->getWeapons()}
-			{foreach from=$weapons item=weapon}{$weapon->name} ({$weapon->getCost()|escape}pts). {/foreach}
+			{foreach from=$weapons item=weapon}{$weapon->name|escape} ({$weapon->getCost()|escape}pts). {/foreach}
 
 			{assign var=abilities value=$figure->getSpecialAbilities($retinue)}
-			{foreach from=$abilities item=ability}{$ability->name} ({$ability->getCost($figure)|escape}pts). {/foreach}
+			{foreach from=$abilities item=ability}{$ability->name|escape} ({$ability->getCost($figure)|escape}pts). {/foreach}
 
 			{assign var=powers value=$figure->getPsykerPowers()}
-			{foreach from=$powers item=power}{$power->name} ({$power->getCost($figure)|escape}pts). {/foreach}
+			{foreach from=$powers item=power}{$power->name|escape} ({$power->getCost($figure)|escape}pts). {/foreach}
+
+			{assign var=equipment value=$figure->getEquipment()}
+			{foreach from=$equipment item=item}{$item->name|escape} ({$item->getCost($figure)|escape}pts). {/foreach}
 
 			{$figure->notes|escape}
 		</td>

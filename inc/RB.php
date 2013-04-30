@@ -29,6 +29,11 @@ class RB {
 		return $power->findSet();
 	}
 
+	function getEquipment() {
+		$equipment = new RB_Equipment;
+		return $equipment->findSet();
+	}
+
 	function getGritCost($grit) {
 		if ($grit <= 2) {
 			return 16;
@@ -67,7 +72,27 @@ class RB {
 		} else {
 			return 20;
 
-		}	}
+		}
+	}
+
+	function getWeaponCost($weapon) {
+		$cost = $weapon->bonus;
+
+		if ($weapon->range > 24) {
+			$cost += 3;
+
+		} elseif ($weapon->range > 18) {
+			$cost += 2;
+
+		} elseif ($weapon->range > 12) {
+			$cost += 1;
+
+		}
+
+		$cost += ($weapon->grit_penalty * 3);
+
+		return $cost;
+	}
 
 	static function startDebug() {
 		$options = &PEAR::getStaticProperty('DB_DataObject', 'options');

@@ -54,6 +54,14 @@ if (!isset($user)) {
 			$link->insert();
 		}
 
+		$link = new RB_EquipmentLink;
+		$link->figure = $figure->id;
+		$link->delete();
+		if (isset($_POST['equipment'])) foreach ($_POST['equipment'] as $id) {
+			$link->equipment = $id;
+			$link->insert();
+		}
+
 		$tpl->assign('updated', true);
 	}
 
@@ -73,6 +81,7 @@ if (!isset($user)) {
 	foreach ($figure->getWeapons() as $weapon) $_REQUEST['weapons'][] = $weapon->id;
 	foreach ($figure->getSpecialAbilities() as $ability) $_REQUEST['abilities'][] = $ability->id;
 	foreach ($figure->getPsykerPowers() as $power) $_REQUEST['powers'][] = $power->id;
+	foreach ($figure->getEquipment() as $equipment) $_REQUEST['equipment'][] = $equipment->id;
 
 	$tpl->assign('figure', $figure);
 }
