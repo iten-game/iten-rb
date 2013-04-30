@@ -9,7 +9,7 @@ class RB_Figure extends RB_DB_Figures {
 		foreach ($this->getWeapons() as $weapon) $cost += $weapon->getCost();
 		foreach ($this->getSpecialAbilities($retinue) as $ability) $cost += $ability->getCost($this);
 		foreach ($this->getPsykerPowers() as $power) $cost += $power->getCost();
-
+		foreach ($this->getEquipment() as $equipment) $cost += $equipment->getCost($this);
 		return $cost;
 	}
 
@@ -50,6 +50,15 @@ class RB_Figure extends RB_DB_Figures {
 		$powers = array();
 		while ($link->fetch()) $powers[] = $link->getPower();
 		return $powers;
+	}
+
+	function getEquipment() {
+		$link = new RB_EquipmentLink;
+		$link->figure = $this->id;
+		$link->find();
+		$equipment = array();
+		while ($link->fetch()) $equipment[] = $link->getEquipment();
+		return $equipment;
 	}
 
 	function in($retinue) {
