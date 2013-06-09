@@ -6,7 +6,7 @@ class RB_Figure extends RB_DB_Figures {
 		$cost =	0;
 		$cost += $this->fv;
 		$cost += $this->sv;
-		$cost += $this->speed;
+		$cost += $this->s;
 		$cost += RB::getGritCost($this->grit);
 		$cost += $this->getArmour()->getCost();
 		foreach ($this->getWeapons() as $weapon) $cost += $weapon->getCost();
