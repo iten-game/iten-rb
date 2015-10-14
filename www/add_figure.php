@@ -43,21 +43,21 @@ if (!isset($user)) {
 
 				$retinue->update();
 
-				foreach ($_POST['weapons'] as $weapon) {
+				if (isset($_POST['weapons'])) foreach ($_POST['weapons'] as $weapon) {
 					$link = new RB_WeaponLink;
 					$link->weapon = $weapon;
 					$link->figure = $figure->id;
 					$link->insert();
 				}
 
-				foreach ($_POST['abilities'] as $ability) {
+				if (isset($_POST['abilities'])) foreach ($_POST['abilities'] as $ability) {
 					$link = new RB_SpecialAbilityLink;
 					$link->ability = $ability;
 					$link->figure = $figure->id;
 					$link->insert();
 				}
 
-				foreach ($_POST['powers'] as $power) {
+				if (isset($_POST['powers'])) foreach ($_POST['powers'] as $power) {
 					$link = new RB_PsykerPowerLink;
 					$link->power = $power;
 					$link->figure = $figure->id;

@@ -1,6 +1,6 @@
 <?php
 
-if (!$user) {
+if (!isset($user)) {
 	$tpl->assign('error', 'not logged in!');
 
 } else {

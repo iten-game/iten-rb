@@ -8,7 +8,7 @@ $res = $retinue->find(true);
 if (0 == $res) {
 	$tpl->assign('error', 'Retinue not found');
 
-} elseif ($retinue->user != $user->id && !$retinue->public) {
+} elseif (!$retinue->public && (!isset($user) || $retinue->user != $user->id)) {
 	$tpl->assign('error', 'Permission denied');
 
 } else {

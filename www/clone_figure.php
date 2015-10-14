@@ -14,7 +14,18 @@ if (!$user) {
 		$tpl->assign('error', 'Permission denied');
 
 	} else {
+		if (isset($_POST['retinue'])) {
+			$retinue = new RB_Retinue($_POST['retinue']);
+			if ($retinue->user != $user->id) {
+				$tpl->assign('error', 'Permission denied');
+				$tpl->display('error.tpl');
+				exit;
+			}
+		}
+
 		$new = $figure->cloneFigure($user);
+
+		if ($retinue) $retinue->addFigure($figure);
 
 		header("Location: /edit_figure?figure={$new->id}");
 		exit;
