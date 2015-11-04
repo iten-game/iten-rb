@@ -10,10 +10,10 @@
 
 <title>{$title|escape} | {$SITE_NAME|escape}</title>
 
-<link rel="stylesheet" type="text/css" href="http://iten-game.org/wp-content/themes/modularity-lite/style.css" />
-<link rel="stylesheet" href="http://iten-game.org/wp-content/themes/modularity-lite/css/print.css" type="text/css" media="print" />
-<!--[if IE]><link rel="stylesheet" href="http://iten-game.org/wp-content/themes/modularity-lite/library/styles/ie.css" type="text/css" media="screen, projection" /><![endif]-->
-<!--[if lte IE 7]><link type="text/css" href="http://iten-game.org/wp-content/themes/modularity-lite/library/styles/ie-nav.css" rel="stylesheet" media="all" /><![endif]-->
+<link rel="stylesheet" type="text/css" href="https://iten-game.org/wp-content/themes/modularity-lite/style.css" />
+<link rel="stylesheet" href="https://iten-game.org/wp-content/themes/modularity-lite/css/print.css" type="text/css" media="print" />
+<!--[if IE]><link rel="stylesheet" href="https://iten-game.org/wp-content/themes/modularity-lite/library/styles/ie.css" type="text/css" media="screen, projection" /><![endif]-->
+<!--[if lte IE 7]><link type="text/css" href="https://iten-game.org/wp-content/themes/modularity-lite/library/styles/ie-nav.css" rel="stylesheet" media="all" /><![endif]-->
 
 <link rel="stylesheet" type="text/css" href="/css/style.css" />
 
@@ -26,7 +26,7 @@
 	}
 {/literal}</style>
 
-<link rel="shortcut icon" type="image/jpg" href="http://iten-game.org/wp-content/uploads/2011/08/icon.jpg"/>
+<link rel="shortcut icon" type="image/jpg" href="https://iten-game.org/wp-content/uploads/2011/08/icon.jpg"/>
 </head>
 
 <body class="page page-template-full-width-page-php">
@@ -59,7 +59,7 @@
 <div class="container">
 <div class="container-inner">
 	<div id="header-image">
-	<img src="http://iten-game.org/wp-content/uploads/2011/08/iten-header.jpg" width="950" height="200" alt="" />
+	<img src="https://iten-game.org/wp-content/uploads/2011/08/iten-header.jpg" width="950" height="200" alt="" />
 	</div>
 	<div class="first last">
 				<div class="page type-page hentry" id="post-92">
