@@ -35,10 +35,10 @@ if (!isset($user)) {
 						),
 						sprintf(
 							"Dear %s,\n\n".
-							"The user %s on %s (http://%s/) sent you the following message:\n\n".
+							"The user %s on %s (https://%s/) sent you the following message:\n\n".
 							"%s\n\n".
 							"To reply, click the 'Reply' button or click on the following link:\n\n".
-							"http://%s/contact_user?id=%s",
+							"https://%s/contact_user?id=%s",
 							ucfirst($contactee->username),
 							ucfirst($user->username),
 							SITE_NAME,

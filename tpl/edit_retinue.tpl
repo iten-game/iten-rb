@@ -17,7 +17,7 @@
 	<p><label for="public">Public:</label> <input type="checkbox" name="public" {if $retinue->public}checked="checked"{/if} /></p>
 	{if $retinue->public}
 		<p><em>Permalink:</em></p>
-		<ul><li><a href="/view_retinue?id={$retinue->id|escape}">http://{$smarty.server.SERVER_NAME|escape}/view_retinue?id={$retinue->id|escape}</a></li></ul>
+		<ul><li><a href="/view_retinue?id={$retinue->id|escape}">https://{$smarty.server.SERVER_NAME|escape}/view_retinue?id={$retinue->id|escape}</a></li></ul>
 	{/if}
 	<p><label for="notes">Notes:</label></p>
 	<textarea name="notes">{$retinue->notes|escape}</textarea>

@@ -51,7 +51,7 @@ if (isset($user)) {
 						"Thank you for registering on %s. Your account has been created with the following password:\n\n".
 						"%s\n\n".
 						"To activate your account, please click on the following link:\n\n".
-						"http://%s/activate?u=%s&t=%s",
+						"https://%s/activate?u=%s&t=%s",
 						ucfirst($user->username),
 						SITE_NAME,
 						$password,

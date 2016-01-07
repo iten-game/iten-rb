@@ -1,7 +1,7 @@
 README
 ======
 
-This is the source code for the ItEN Retinue Builder, a web based application for creating retinues for the *In the Emperor's Name* skirmish wargame, hosted at http://rb.iten-game.org.
+This is the source code for the ItEN Retinue Builder, a web based application for creating retinues for the *In the Emperor's Name* skirmish wargame, hosted at https://rb.iten-game.org.
 
 The RB is a LAMP based application and requires the following:
 
