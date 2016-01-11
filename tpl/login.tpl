@@ -1,3 +1,5 @@
 {include file="head.tpl" title="Log In"}
-{include file="login-form.tpl"}
+
+{if !$error}{include file="login-form.tpl"}{/if}
+
 {include file="foot.tpl"}

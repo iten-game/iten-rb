@@ -1,3 +1,5 @@
 {include file="head.tpl" title="Create Retinue"}
-{include file="create-retinue-form.tpl"}
+
+{if !$error}{include file="create-retinue-form.tpl"}{/if}
+
 {include file="foot.tpl"}

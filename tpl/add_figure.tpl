@@ -1,4 +1,5 @@
 {include file="head.tpl" title="Add Figure"}
 
-{include file="add-figure-form.tpl"}
+{if !$error}{include file="add-figure-form.tpl"}{/if}
+
 {include file="foot.tpl"}

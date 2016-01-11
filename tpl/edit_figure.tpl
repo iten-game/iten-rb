@@ -3,6 +3,8 @@ Edit Figure | {$figure->name} {* don't escape as it will be escaped in head.tpl 
 {/capture}
 {include file="head.tpl" title=$title}
 
+{if !$error}
+
 {if $updated}
 	<p>Figure has been updated.</p>
 {/if}
@@ -14,5 +16,7 @@ Edit Figure | {$figure->name} {* don't escape as it will be escaped in head.tpl 
 
 	<p><input type="submit" value="Save Changes" /></p>
 </form>
+
+{/if}
 
 {include file="foot.tpl"}
